@@ -1,0 +1,410 @@
+{
+    "payload_instructions": [
+        {
+            "asm": "mov ecx, (s)",
+            "bindata": "B9 01 00 00 00",
+            "payload_offset": 1,
+            "payload_length": 2,
+            "rnd_offset": null,
+            "rnd_length": null
+        },
+        {
+            "asm": "call (s)",
+            "bindata": "E8 D0 04 00 00",
+            "payload_offset": 1,
+            "payload_length": 2,
+            "rnd_offset": null,
+            "rnd_length": null
+        },
+        {
+            "asm": "jz (s)",
+            "bindata": "0F 84 3A 01 00 00",
+            "payload_offset": 2,
+            "payload_length": 2,
+            "rnd_offset": null,
+            "rnd_length": null
+        },
+        {
+            "asm": "jz (s)",
+            "bindata": "74 3C",
+            "payload_offset": 1,
+            "payload_length": 1,
+            "rnd_offset": null,
+            "rnd_length": null
+        },
+        {
+            "asm": "jl (s)",
+            "bindata": "7c b1",
+            "payload_offset": 1,
+            "payload_length": 1,
+            "rnd_offset": null,
+            "rnd_length": null
+        },
+        {
+            "asm": "jnz (s)",
+            "bindata": "75 FA",
+            "payload_offset": 1,
+            "payload_length": 1,
+            "rnd_offset": null,
+            "rnd_length": null
+        },
+        {
+            "asm": "cmp ecx, (s)",
+            "bindata": "83 F9 01",
+            "payload_offset": 2,
+            "payload_length": 1,
+            "rnd_offset": null,
+            "rnd_length": null
+        },
+        {
+            "asm": "cmp edi, (s)",
+            "bindata": "83 ff 02",
+            "payload_offset": 2,
+            "payload_length": 1,
+            "rnd_offset": null,
+            "rnd_length": null
+        },
+        {
+            "asm": "mov eax, (s)",
+            "bindata": "B8 08 00 00 00",
+            "payload_offset": 1,
+            "payload_length": 2,
+            "rnd_offset": null,
+            "rnd_length": null
+        },
+        {
+            "asm": "imul rax, (s)",
+            "bindata": "48 6B C0 00",
+            "payload_offset": 3,
+            "payload_length": 1,
+            "rnd_offset": null,
+            "rnd_length": null
+        },
+        {
+            "asm": "lea (s)",
+            "bindata": "48 8D 0D 00 00 00 00",
+            "payload_offset": 3,
+            "payload_length": 3,
+            "rnd_offset": null,
+            "rnd_length": null
+        },
+        {
+            "asm": "jmp (s)",
+            "bindata": "48 FF 25 00 00 00 00",
+            "payload_offset": 3,
+            "payload_length": 3,
+            "rnd_offset": null,
+            "rnd_length": null
+        },
+        {
+            "asm": "mov al, (s)",
+            "bindata": "B0 01",
+            "payload_offset": 1,
+            "payload_length": 1,
+            "rnd_offset": null,
+            "rnd_length": null
+        },
+        {
+            "asm": "mov ecx, (s)",
+            "bindata": "B9 17 00 00 00",
+            "payload_offset": 1,
+            "payload_length": 2,
+            "rnd_offset": null,
+            "rnd_length": null
+        },
+        {
+            "asm": "mov r8d, (s)",
+            "bindata": "41 B8 D0 04 00 00",
+            "payload_offset": 2,
+            "payload_length": 2,
+            "rnd_offset": null,
+            "rnd_length": null
+        },
+        {
+            "asm": "mov r8d, (s)",
+            "bindata": "41 B8 D0 04 00 00",
+            "payload_offset": 2,
+            "payload_length": 2,
+            "rnd_offset": null,
+            "rnd_length": null
+        },
+        {
+            "asm": "jmp (s)",
+            "bindata": "e9 5e fe 00 00",
+            "payload_offset": 1,
+            "payload_length": 2,
+            "rnd_offset": null,
+            "rnd_length": null
+        },
+        {
+            "asm": "test param_1, (s)",
+            "bindata": "66 f7 c1 ff ff",
+            "payload_offset": 3,
+            "payload_length": 2,
+            "rnd_offset": null,
+            "rnd_length": null
+        },
+        {
+            "asm": "rol param_1, (s)",
+            "bindata": "48 c1 c1 10",
+            "payload_offset": 3,
+            "payload_length": 1,
+            "rnd_offset": null,
+            "rnd_length": null
+        },
+        {
+            "asm": "ror param_1, (s)",
+            "bindata": "48 c1 c9 10",
+            "payload_offset": 3,
+            "payload_length": 1,
+            "rnd_offset": null,
+            "rnd_length": null
+        },
+        {
+            "asm": "mov dh, (s)",
+            "bindata": "b6 17",
+            "payload_offset": 1,
+            "payload_length": 1,
+            "rnd_offset": null,
+            "rnd_length": null
+        },
+        {
+            "asm": "int (s)",
+            "bindata": "cd 29",
+            "payload_offset": 1,
+            "payload_length": 1,
+            "rnd_offset": null,
+            "rnd_length": null
+        },
+        {
+            "asm": "mov (s), rax",
+            "bindata": "48 89 05 a1 33 03 00",
+            "payload_offset": 3,
+            "payload_length": 3,
+            "rnd_offset": null,
+            "rnd_length": null
+        },
+        {
+            "asm": "mov (s), (r32)",
+            "bindata": "c7 05 d5 31 03 00 09 04 00 c0",
+            "payload_offset": 2,
+            "payload_length": 2,
+            "rnd_offset": 6,
+            "rnd_length": 2
+        },
+        {
+            "asm": "cmpxchg (s), rcx",
+            "bindata": "48 0f b1 0d 38 35 03 00",
+            "payload_offset": 4,
+            "payload_length": 3,
+            "rnd_offset": null,
+            "rnd_length": null
+        },
+        {
+            "asm": "mov qword ptr[rbp+local_(r8)], (s)",
+            "bindata": "c7 45 f4 00 00 00 00",
+            "payload_offset": 3,
+            "payload_length": 3,
+            "rnd_offset": 2,
+            "rnd_length": 1
+        }
+    ],
+    "pseudo_instructions": [
+        {
+            "asm": "test al, al",
+            "bindata": "84 C0"
+        },
+        {
+            "asm": "test ecx, ecx",
+            "bindata": "85 C9"
+        },
+        {
+            "asm": "xor dil, dil",
+            "bindata": "40 32 FF"
+        },
+        {
+            "asm": "mov bl, al",
+            "bindata": "8A D8"
+        },
+        {
+            "asm": "xor eax, eax",
+            "bindata": "33 C0"
+        },
+        {
+            "asm": "mov ebx,  ecx",
+            "bindata": "8B D9"
+        },
+        {
+            "asm": "mov ecx,  ebx",
+            "bindata": "8B CB"
+        },
+        {
+            "asm": "xor edx, edx",
+            "bindata": "33 D2"
+        },
+        {
+            "asm": "nop",
+            "bindata": "90"
+        },
+        {
+            "asm": "xor r8d, r8d",
+            "bindata": "45 33 c0"
+        }
+    ],
+    "pushpop_instructions": [
+        {
+            "push": {
+                "asm": "push rax",
+                "bindata": "50"
+            },
+            "pop": {
+                "asm": "pop rax",
+                "bindata": "58"
+            }
+        },
+        {
+            "push": {
+                "asm": "push rbp",
+                "bindata": "55"
+            },
+            "pop": {
+                "asm": "pop rbp",
+                "bindata": "5d"
+            }
+        },
+        {
+            "push": {
+                "asm": "push rbx",
+                "bindata": "53"
+            },
+            "pop": {
+                "asm": "pop rbx",
+                "bindata": "5B"
+            }
+        },
+        {
+            "push": {
+                "asm": "push rcx",
+                "bindata": "51"
+            },
+            "pop": {
+                "asm": "pop rcx",
+                "bindata": "59"
+            }
+        },
+        {
+            "push": {
+                "asm": "push rdx",
+                "bindata": "52"
+            },
+            "pop": {
+                "asm": "pop rdx",
+                "bindata": "5A"
+            }
+        },
+        {
+            "push": {
+                "asm": "push r8",
+                "bindata": "41 50"
+            },
+            "pop": {
+                "asm": "pop r8",
+                "bindata": "41 58"
+            }
+        },
+        {
+            "push": {
+                "asm": "push r9",
+                "bindata": "41 51"
+            },
+            "pop": {
+                "asm": "pop r9",
+                "bindata": "41 59"
+            }
+        },
+        {
+            "push": {
+                "asm": "push r10",
+                "bindata": "41 52"
+            },
+            "pop": {
+                "asm": "pop r10",
+                "bindata": "41 5A"
+            }
+        },
+        {
+            "push": {
+                "asm": "push r11",
+                "bindata": "41 53"
+            },
+            "pop": {
+                "asm": "pop r11",
+                "bindata": "41 5B"
+            }
+        },
+        {
+            "push": {
+                "asm": "push r12",
+                "bindata": "41 54"
+            },
+            "pop": {
+                "asm": "pop r12",
+                "bindata": "41 5C"
+            }
+        },
+        {
+            "push": {
+                "asm": "push r13",
+                "bindata": "41 55"
+            },
+            "pop": {
+                "asm": "pop r13",
+                "bindata": "41 5D"
+            }
+        },
+        {
+            "push": {
+                "asm": "push r14",
+                "bindata": "41 56"
+            },
+            "pop": {
+                "asm": "pop r14",
+                "bindata": "41 5E"
+            }
+        },
+        {
+            "push": {
+                "asm": "push r15",
+                "bindata": "41 57"
+            },
+            "pop": {
+                "asm": "pop r15",
+                "bindata": "41 5F"
+            }
+        }
+    ],
+    "stack_instructions": [
+        {
+            "asm": "sub rsp, (r8)",
+            "bindata": "48 83 EC 00",
+            "opcode_length": 3
+        },
+        {
+            "asm": "add rsp, (r8)",
+            "bindata": "48 83 C4 00",
+            "opcode_length": 3
+        },
+        {
+            "asm": "mov rbp, rsp",
+            "bindata": "48 89 e5"
+        },
+        {
+            "asm": "re",
+            "bindata": "c3"
+        },
+        {
+            "asm": "int3",
+            "bindata": "cc"
+        }
+    ]
+}
