@@ -89,14 +89,6 @@
             "rnd_length": null
         },
         {
-            "asm": "jmp (s)",
-            "bindata": "48 FF 25 00 00 00 00",
-            "payload_offset": 3,
-            "payload_length": 3,
-            "rnd_offset": null,
-            "rnd_length": null
-        },
-        {
             "asm": "mov al, (s)",
             "bindata": "B0 01",
             "payload_offset": 1,
@@ -124,14 +116,6 @@
             "asm": "mov r8d, (s)",
             "bindata": "41 B8 D0 04 00 00",
             "payload_offset": 2,
-            "payload_length": 2,
-            "rnd_offset": null,
-            "rnd_length": null
-        },
-        {
-            "asm": "jmp (s)",
-            "bindata": "e9 5e fe 00 00",
-            "payload_offset": 1,
             "payload_length": 2,
             "rnd_offset": null,
             "rnd_length": null

@@ -3,7 +3,6 @@
 Encodes arbitrary data into C code which will be mapped to the .text section when compiled.
 The encoded data mimics real x64_86 assembly."""
 
-
 from typing import Tuple
 import argparse
 import datetime
@@ -16,6 +15,17 @@ import generator
 
 from common import PayloadInstruction, Result, XorKey, parse_instruction_templates
 from entropy import shannon_entropy
+
+INTRO = r"""
+    ░▒▓██████▓▒░  ░▒▓██████▓▒░░▒▓███████▓▒░ ░▒▓██████▓▒░ ░▒▓███████▓▒░▒▓██████████████▓▒░  
+    ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░ 
+    ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░ 
+    ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░ 
+    ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░      ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░ 
+    ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░      ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░ 
+    ░▒▓██████▓▒░  ░▒▓██████▓▒░░▒▓███████▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓███████▓▒░░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░ 
+                                                                                       
+"""
 
 logging.basicConfig()
 LOGGER = logging.getLogger("CODASM")
@@ -168,12 +178,14 @@ def output_bin(args, res, xor_key):
 def main():
     """Entrypoint"""
 
+    print(INTRO)
+
     global VAL_NUM_BYTES_MIN
     global VAL_NUM_BYTES_MAX
     global VAL_ENC_CHANCE
 
     parser = argparse.ArgumentParser(description="CODASM encoding utility",
-                                     epilog="CAUTION: ASM output is meant to be used for manual reference, not for compiling!")
+                                     epilog="Note: ASM output is meant to be used for manual reference only.")
 
     parser.add_argument("-i", "--input", required=True,
                         help="Path to the input file to encode as ASM/binary instructions")
