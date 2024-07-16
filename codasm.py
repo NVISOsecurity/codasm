@@ -178,14 +178,24 @@ def output_bin(args, res, xor_key):
 def main():
     """Entrypoint"""
 
-    print(INTRO)
-
     global VAL_NUM_BYTES_MIN
     global VAL_NUM_BYTES_MAX
     global VAL_ENC_CHANCE
 
-    parser = argparse.ArgumentParser(description="CODASM encoding utility",
-                                     epilog="Note: ASM output is meant to be used for manual reference only.")
+    class LogoParser(argparse.ArgumentParser):
+        """Custom ArgumentParser that prepends the application logo to any non-operation output"""
+
+        def error(self, message):
+            print(INTRO)
+            self.print_usage()
+            self.exit(2)
+
+        def print_help(self, file=None):
+            print(INTRO)
+            super().print_help(file)
+
+    parser = LogoParser(description="CODASM encoding utility",
+                        epilog="Note: ASM output is meant to be used for manual reference only.")
 
     parser.add_argument("-i", "--input", required=True,
                         help="Path to the input file to encode as ASM/binary instructions")
@@ -257,4 +267,3 @@ if __name__ == '__main__':
         main()
     except Exception as exception:
         LOGGER.exception(exception, exc_info=True)
-        

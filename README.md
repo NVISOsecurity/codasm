@@ -1,5 +1,5 @@
 <div align="center">
-  <img width="125px" src="rsrc/codasm.jpg" />
+  <img width="175px" src="rsrc/codasm.png" />
   <h1>CODASM</h1>
   <br/>
 
@@ -52,7 +52,7 @@ Note: ASM output is meant to be used for manual reference, not for compiling!
 Example:
 1. Prepare shellcode (e.g. CS/BR shellcode) and save as `shellcode.bin`
 2. Encode shellcode using CODASM: `./encode.py --i shellcode.bin -oc codasmloader.h`
-3. Copy `codasmloader.h` into your favourite loader (e.g. [CrbrLdr](https://github.com/NVISO-ARES/CrbrLdr/)) or into a standalone minimal loader
+3. Copy `codasmloader.h` into your favourite loader or into a standalone minimal loader (e.g. [/demo/codasm.c](demo/codasm.c))
 4. Ensure to call CODASM's `decode` before calling the shellcode:
     ```c
     /* ~snip CODASM decode~*/
