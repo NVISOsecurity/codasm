@@ -60,7 +60,7 @@ Note: ASM output is meant to be used for manual reference, not for compiling!
 
 Example:
 1. Prepare shellcode (e.g. CS/BR shellcode) and save as `shellcode.bin`
-2. Encode shellcode using CODASM: `./encode.py --i shellcode.bin -oc codasmloader.h`
+2. Encode shellcode using CODASM: `./codasm.py --i shellcode.bin -oc codasmloader.h`
 3. Copy `codasmloader.h` into your favourite loader or into a standalone minimal loader (e.g. [/demo/codasm.c](demo/codasm.c))
 4. Ensure to call CODASM's `decode` before calling the shellcode:
     ```c
