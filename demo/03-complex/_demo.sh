@@ -54,7 +54,7 @@ ent demo.bin | grep Entropy
 echo "[+] Shellcode created!"
 
 # Invoke CODASM
-cd "$WD/.."
+cd "$WD/../.."
 echo ""
 echo "[7] Running CODASM - this might take a while..."
 python3 codasm.py -i "$TWD/demo.bin" -oc "$TWD/codasm_decoder.h" -op "$TWD/codasm_payload.h" --rng 0 -vbch 0.9 -v 2>&1 >/dev/null | grep Encoded

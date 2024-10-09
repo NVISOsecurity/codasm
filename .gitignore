@@ -8,4 +8,5 @@ build/**
 *.exe
 *.dll
 *.bin
-demo/temp
+demo/**/temp
+demo/**/prepared
