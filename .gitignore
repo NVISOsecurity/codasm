@@ -1,5 +1,6 @@
 test.*
 codasm_*
+!shellcode/codasm_stub.c
 __pycache__/
 *.py[cod]
 *$py.class
