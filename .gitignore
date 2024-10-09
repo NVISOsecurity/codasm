@@ -1,5 +1,6 @@
 test.*
 codasm_*
+!codasm_shellcode.sh
 !shellcode/codasm_stub.c
 __pycache__/
 *.py[cod]
